@@ -1,0 +1,142 @@
+{
+  "name": "devpilot-ai",
+  "displayName": "DevPilot AI",
+  "publisher": "harshitsharma",
+   "icon": "images/iconn.png",
+"description": "🚀 AI-powered VS Code toolkit to generate README, Boilerplates, package.json, .gitignore, LICENSE, analyze project health and fix project structure.",
+  "version": "1.0.0",
+
+  "license": "MIT",
+
+  
+  "engines": {
+    "vscode": "^1.125.0"
+  },
+
+
+
+ 
+  "galleryBanner": {
+  "color": "#0f172a",
+  "theme": "dark"
+},
+
+
+ "categories": [
+  "Other",
+  "Programming Languages",
+  "Snippets"
+],
+
+  "keywords": [
+    "ai",
+    "developer",
+    "readme",
+    "package-json",
+    "gitignore",
+    "license",
+    "project-analyzer",
+    "vscode",
+    "productivity"
+  ],
+
+  "activationEvents": [
+    "onCommand:devpilot-ai.createReadme",
+    "onCommand:devpilot-ai.createGitignore",
+    "onCommand:devpilot-ai.projectSetup",
+    "onCommand:devpilot-ai.createLicense",
+    "onCommand:devpilot-ai.analyzeProject",
+    "onCommand:devpilot-ai.createPackageJson",
+    "onCommand:devpilot-ai.generateBoilerplate",
+    "onCommand:devpilot-ai.fixProject",
+    "onCommand:devpilot-ai.smartReadme"
+  ],
+
+  "main": "./dist/extension.js",
+
+  "contributes": {
+    "commands": [
+      {
+        "command": "devpilot-ai.createReadme",
+        "title": "DevPilot AI: Create README"
+      },
+      {
+        "command": "devpilot-ai.createGitignore",
+        "title": "DevPilot AI: Create .gitignore"
+      },
+      {
+  "command": "devpilot-ai.generateBoilerplate",
+  "title": "DevPilot AI: Generate Boilerplate"
+},
+{
+  "command": "devpilot-ai.smartReadme",
+  "title": "DevPilot AI: Smart README"
+},
+
+{
+  "command": "devpilot-ai.fixProject",
+  "title": "DevPilot AI: Fix Project"
+},
+      {
+        "command": "devpilot-ai.createLicense",
+        "title": "DevPilot AI: Create LICENSE"
+      },
+      {
+        "command": "devpilot-ai.createPackageJson",
+        "title": "DevPilot AI: Create package.json"
+      },
+      {
+        "command": "devpilot-ai.projectSetup",
+        "title": "DevPilot AI: Project Setup"
+      },
+      {
+        "command": "devpilot-ai.analyzeProject",
+        "title": "DevPilot AI: Analyze Project"
+      }
+    ]
+  },
+
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+
+    "compile": "npm run check-types && npm run lint && node esbuild.js",
+
+    "watch": "npm-run-all -p watch:*",
+
+    "watch:esbuild": "node esbuild.js --watch",
+
+    "watch:tsc": "tsc --noEmit --watch --project tsconfig.json",
+
+    "package": "npm run check-types && npm run lint && node esbuild.js --production",
+
+    "compile-tests": "tsc -p . --outDir out",
+
+    "watch-tests": "tsc -p . -w --outDir out",
+
+    "pretest": "npm run compile-tests && npm run compile && npm run lint",
+
+    "check-types": "tsc --noEmit",
+
+    "lint": "eslint src",
+
+    "test": "vscode-test"
+  },
+
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "24.x",
+    "@types/vscode": "^1.125.0",
+    "@vscode/test-cli": "^0.0.15",
+    "@vscode/test-electron": "^3.0.0",
+    "esbuild": "^0.28.1",
+    "eslint": "^10.5.0",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.61.1"
+  },
+
+  "overrides": {
+    "diff": "^8.0.4",
+    "serialize-javascript": "^7.0.6"
+  }
+}
