@@ -8,6 +8,16 @@
 
   "license": "MIT",
 
+ "repository": {
+  "type": "git",
+  "url": "https://github.com/Harshit-sharma24/devpilot-ai.git"
+},
+
+"homepage": "https://github.com/Harshit-sharma24/devpilot-ai",
+
+"bugs": {
+  "url": "https://github.com/Harshit-sharma24/devpilot-ai/issues"
+},
   
   "engines": {
     "vscode": "^1.125.0"
