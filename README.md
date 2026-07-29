@@ -61,19 +61,31 @@ Open the Command Palette (`Ctrl + Shift + P`) and run:
 
 ---
 
-# 🖼 Extension Icon
+## 🚀 Installation
 
-The extension includes a custom professional icon for the Visual Studio Code Marketplace.
+### Option 1 – Install using VSIX (Recommended)
 
----
-
-# 🚀 Installation
-
-Install the extension from the Visual Studio Code Marketplace (coming soon).
-
-Or install the generated `.vsix` file manually.
+1. Download the latest **devpilot-ai-1.0.0.vsix** from the Releases section.
+2. Open **Visual Studio Code**.
+3. Go to **Extensions** → **⋮** → **Install from VSIX...**
+4. Select the downloaded `.vsix` file.
+5. Restart VS Code.
 
 ---
+
+### Option 2 – Build from Source
+
+```bash
+git clone https://github.com/Harshit-sharma24/devpilot-ai.git
+
+cd devpilot-ai
+
+npm install
+
+npm run compile
+```
+
+Press **F5** to launch the Extension Development Host.
 
 # 🛣 Roadmap
 
